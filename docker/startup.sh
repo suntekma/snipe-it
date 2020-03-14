@@ -9,12 +9,6 @@ then
   exit
 fi
 
-if [ -f /var/lib/snipeit/ssl/snipeit-ssl.crt -a -f /var/lib/snipeit/ssl/snipeit-ssl.key ]
-then
-  a2enmod ssl
-else
-  a2dismod ssl
-fi
 
 # create data directories
 for dir in \
