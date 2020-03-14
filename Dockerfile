@@ -47,6 +47,7 @@ COPY docker/001-default-ssl.conf /etc/apache2/sites-enabled/001-default-ssl.conf
 
 COPY docker/ServerCertificate.crt /etc/apache2/sites-enabled/ServerCertificate.crt
 COPY docker/private.key /etc/apache2/sites-enabled/private.key
+COPY docker/Intermediate.crt /etc/apache2/sites-enabled/Intermediate.crt
 
 RUN a2enmod ssl
 RUN a2ensite default-ssl.conf
