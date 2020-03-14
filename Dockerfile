@@ -44,7 +44,7 @@ RUN mkdir -p /var/lib/snipeit/ssl/
 COPY docker/001-default-ssl.conf /etc/apache2/sites-enabled/001-default-ssl.conf
 #COPY docker/001-default-ssl.conf /etc/apache2/sites-available/001-default-ssl.conf
 
-COPY docker/private.key /etc/apache2/sites-enabled/001-default-ssl.conf
+
 COPY docker/ServerCertificate.crt /var/lib/snipeit/ssl/snipeit-ssl.crt
 COPY docker/private.key /var/lib/snipeit/ssl/snipeit-ssl.key
 
