@@ -44,7 +44,7 @@ RUN rm -rf /etc/apache2/sites-available/000-default.conf
 RUN mkdir -p /var/lib/snipeit/ssl/
 COPY docker/001-default-ssl.conf /etc/apache2/sites-enabled/001-default-ssl.conf
 #COPY docker/001-default-ssl.conf /etc/apache2/sites-available/001-default-ssl.conf
-
+COPY docker/ports.conf /etc/apache2/ports.conf
 
 COPY docker/ServerCertificate.crt /etc/apache2/sites-enabled/ServerCertificate.crt
 COPY docker/private.key /etc/apache2/sites-enabled/private.key
