@@ -45,8 +45,8 @@ COPY docker/001-default-ssl.conf /etc/apache2/sites-enabled/001-default-ssl.conf
 #COPY docker/001-default-ssl.conf /etc/apache2/sites-available/001-default-ssl.conf
 
 
-COPY docker/ServerCertificate.crt /var/lib/snipeit/ssl/snipeit-ssl.crt
-COPY docker/private.key /var/lib/snipeit/ssl/snipeit-ssl.key
+COPY docker/ServerCertificate.crt /var/lib/snipeit/snipeit-ssl.crt
+COPY docker/private.key /var/lib/snipeit/snipeit-ssl.key
 
 RUN a2enmod ssl
 RUN a2ensite default-ssl.conf
