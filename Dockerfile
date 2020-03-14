@@ -37,7 +37,7 @@ RUN useradd -m --uid 1000 --gid 50 docker
 RUN echo export APACHE_RUN_USER=docker >> /etc/apache2/envvars
 RUN echo export APACHE_RUN_GROUP=staff >> /etc/apache2/envvars
 
-COPY docker/000-default.conf /etc/apache2/sites-enabled/000-default.conf
+# COPY docker/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
 #SSL
 RUN mkdir -p /var/lib/snipeit/ssl/
